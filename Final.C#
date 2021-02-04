@@ -1,0 +1,212 @@
+using System;
+using static System.Console;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+// STUDENT ID: N10368361
+// STUDENT NAME: MICHAEL RAVINA
+
+namespace ConsoleApp1
+{
+    class Program
+
+    {
+        static void Main(string[] args)
+        {
+            // VARIABLE DECLARATION
+            int NumOfPassengers = 0;
+            int AddSeats = 0;
+            const int MAXSEATS = 40;
+            string Input;
+            bool QUIT = false;
+
+            WriteLine("Please INPUT number of passengers you wish to enter: ");
+            Input = ReadLine();
+            bool SUCESS = int.TryParse(Input, out NumOfPassengers); // CHECK INPUT if its an int
+            Passenger NewPassenger = new Passenger(NumOfPassengers);
+
+            while (QUIT == false)
+            {
+                if (SUCESS)
+                {
+                    if (AddSeats <= MAXSEATS) // CONTINUES as long as seats are available
+                    {
+                        for (int i = 0; i < NumOfPassengers; i++)
+                        {
+                            NewPassenger.fname[i] = GetInput("First Name");
+                            NewPassenger.lname[i] = GetInput("Last Name");
+                            AddSeats++;
+
+                            if (AddSeats >= MAXSEATS)
+                            {
+                                WriteLine("ALL SEATS HAVE benn ALLOCATED. ALL SEATS BOOKED FROM HEREON WILL BE VOID. Please notify AIRLINE ASSISTANT."); // NOTIFY AIRLINE ASSISTANT once all seats are allocated
+                                QUIT = true;
+                            }
+                            else if (AddSeats == NumOfPassengers) // Option to proceed to printing of boarding pass
+                            {
+                                NewPassenger.quit[i] = GetInput("Q to exit or TYPE ENTER to continue.");
+
+                                if (NewPassenger.quit[i] != "Q")
+                                {
+                                    QUIT = false;
+                                }
+                            }
+                        }
+                    }
+                    NewPassenger.Display(); // DISPLAY passenger names, seat numbers security numbers, etc.
+                    break;
+                }
+                else
+                {
+                    WriteLine("PROGRAM ACCEPTS VALID VALID INTEGERS ONLY. Please rerun program."); // Ask for rerun
+                    break;
+                }
+            }
+
+            WriteLine("The AVAILABLE SEATS currently on the flight is {0}", NewPassenger.GetSeats()); // METHOD TO DISPLAY AVAIABLE SEATS
+
+            ReadKey();
+        }//end of MAIN
+
+        public static string GetInput(string what)
+        {
+            WriteLine("Please ENTER: {0}", what);
+            string input = ReadLine();
+            return input;
+        }
+
+
+    }//end of PROGRAM class
+}//end of NAMESPACE
+
+// CREATE ADDITIONAL CLASS
+class Passenger
+{
+    // VARIABLE DECLARATION
+    int maxseats;
+    readonly int SEATS = 40;
+    readonly string TIMENOW = DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm:ss");
+
+    // ARRAYS FOR PASSENGER CLASS
+    private string[] firstname;
+    private string[] lastname;
+    private string[] quitprogram;
+    private double[] secnumber;
+    public double[] seatnumber;
+    private double[] gatenumber;
+
+    public int GetSeats() // METHOD for informing available seats
+    {
+        int seats = SEATS - maxseats;
+        return seats;
+    }
+    public string GetDateTime() // METHOD to print DATE and TIME
+    {
+        string timenow = TIMENOW; // DATE AND TIME printed when passenger entries are completed
+        return timenow;
+    }
+    public Passenger(int size)
+    {
+        firstname = new string[size];
+        lastname = new string[size];
+        quitprogram = new string[size];
+        secnumber = new double[size];
+        seatnumber = new double[size];
+        gatenumber = new double[size];
+    }
+
+    public string[] fname
+    {
+        get { return firstname; }
+        set { firstname = value; }
+    }
+    public string[] lname
+    {
+        get { return lastname; }
+        set { lastname = value; }
+    }
+    public string[] quit
+    {
+        get { return quitprogram; }
+        set { quitprogram = value; }
+    }
+    public double[] GetSecurityNumber()
+    {
+        Random securitynumber = new Random(); // SECURITY NUMBERS BETWEEN 30000 & 999,999 must be RANDOMLY GENERATED 
+
+        for (int i = 0; i < firstname.Length; i++)
+        {
+
+            this.secnumber[i] = securitynumber.Next(30000, 1000000);
+        }
+        return secnumber;
+    }
+    public double[] GetSeatNumber() // SEAT NUMBERS ARE INCREMENTED BY 1 FOR EACH PASSENGER
+    {
+
+        int[] stnumber = Enumerable.Range(1, 5).ToArray();
+
+        for (int i = 0; i < firstname.Length; i++)
+        {
+            while (seatnumber[i] != stnumber[i])
+            {
+                seatnumber[i] = stnumber[i];
+                maxseats++;
+            }
+        }
+        return seatnumber;
+    }
+    public double[] GetGateNumber() // FIXED GATE NUMBER SINCE ALL PASSENGERS ARE GOING TO BE IN THE SAME FLIGHT
+    {
+        Random gtnumber = new Random();
+
+        for (int i = 0; i < firstname.Length; i++)
+        {
+            this.gatenumber[i] = gtnumber.Next(11, 12);
+        }
+        return gatenumber;
+    }
+    public void Display()
+    {
+        Clear();
+        const int MAXLENGTH = 5;
+        for (int i = 0; i < firstname.Length; i++)
+        {
+            // TRIM FIRST and/or LAST names if over five characters
+            if (firstname[i].Length > MAXLENGTH && lastname[i].Length <= MAXLENGTH)
+            {
+                firstname[i] = firstname[i].Substring(0, 5);
+            }
+            else if (firstname[i].Length <= MAXLENGTH && lastname[i].Length > MAXLENGTH)
+            {
+                lastname[i] = lastname[i].Substring(0, 5);
+            }
+            else if (firstname[i].Length > MAXLENGTH && lastname[i].Length > MAXLENGTH)
+            {
+                firstname[i] = firstname[i].Substring(0, 5);
+                lastname[i] = lastname[i].Substring(0, 5);
+            }
+
+            WriteLine("The passenger FIRST NAME is {0} ", firstname[i]);
+            WriteLine("The passenger LAST NAME is {0}", lastname[i]);
+            WriteLine("The SECURITY NUMBER is {0}", GetSecurityNumber()[i]);
+            WriteLine("The SEAT NUMBER is {0}", GetSeatNumber()[i]);
+            WriteLine("The GATE NUMBER is {0}", GetGateNumber()[i]);
+            WriteLine("================================================\n");
+
+
+        }
+        WriteLine("Press ENTER to get TABLE FORM.");
+        ReadKey();
+        Clear();
+
+        WriteLine("|LAST NAME|\t|FIRST NAME|\t|SECURITY NUMBER|\t|SEAT NUMBER|\t|GATE NUMBER|"); // DISPLAY BOARDING PASS IN TABULAR FORMAT
+        for (int i = 0; i < firstname.Length; i++)
+        {
+            WriteLine("|{0}|\t\t|{1}|\t\t|{2}|\t\t|{3}|\t\t|{4}|", lastname[i], firstname[i], secnumber[i], seatnumber[i], gatenumber[i]);
+        }
+        WriteLine("PASSENGER ENTRIES were completed on {0}.", GetDateTime());
+    }// end of DISPLAY
+}// end of PASSENGER class
