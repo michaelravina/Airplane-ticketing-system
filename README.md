@@ -41,9 +41,10 @@ There are many great ticketing airline systems around but nothing like Koala Air
 Some of the project requirements (specified by the tutor):
 * Names should be only accepted with letters and no numbers
 * A display table for the final passengers with unique seat numbers and ID
-* Passengers whose last names exceed 5 letters are to be trimmed
+* Passengers whose first & last names exceed 5 letters are to be trimmed
 * Max seats are 40
-* Many more constraints but I'm too lazy to type 
+* Random security numbers between 30,000 - 999,999
+* Many more constraints which I forgot
 
 The finals was very enjoyable and although I made other C# projects before, this one takes the cake for its challenges.
 
