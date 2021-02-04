@@ -7,7 +7,7 @@
   <p align="center">
     An awesome little airline ticketing program! 
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/michaelravina/Airplane-ticketing-system"><strong>Explore the docs »</strong></a>
     <br />
   </p>
 </p>
@@ -90,6 +90,7 @@ Use this space to show useful examples of how a project can be used. Additional 
 Your Name - Michael Ravina - michaelravina@yahoo.com
 
 Project Link: [https://github.com/michaelravina/Airplane-ticketing-system]
+
 Linkedin: [linkedin-url]: https://www.linkedin.com/in/mike-ravina-1368a11a8/
 
 
