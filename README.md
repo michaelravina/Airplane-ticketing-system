@@ -68,7 +68,7 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 ![](Images/2nd%20SS.png)
 
-2. A display table is shown as a summary of the input data.
+2. A display table with trimmed names is shown as a summary of the input data.
 
 ![](Images/3rd%20SS.png)
 
