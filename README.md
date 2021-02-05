@@ -72,7 +72,7 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 ![](Images/3rd%20SS.png)
 
-3.The final project wherein the names are trimmed together with all the seat & gate numbers, security code, date & time, etc.
+3.The final output wherein the names are trimmed together with all the seat & gate numbers, security code, date & time, etc.
 
 
 
