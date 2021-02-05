@@ -92,14 +92,4 @@ Linkedin: [linkedin-url]: https://www.linkedin.com/in/mike-ravina-1368a11a8/
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 * QUT staff and Dr. Arash for holding my hand (metaphorically) throughout the project
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
-* [Font Awesome](https://fontawesome.com)
+* To the github community for providing me this awesome readme template
