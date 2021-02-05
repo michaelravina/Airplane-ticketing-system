@@ -34,7 +34,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![](Images/3rd%20SS.png)
 
 There are many great ticketing airline systems around but nothing like Koala Airlines! As my final programming fundamentals project, the code was six months in the making primarily because it is the application of all the things that we were taught in lecture and tutorial sessions. 
 
