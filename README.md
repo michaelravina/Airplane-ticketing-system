@@ -2,7 +2,7 @@
 <br />
 <p align="center">
  
- <img src="Images/5th%20SS.png" width="250" height="250">
+ <img src="Images/6th%20SS.jpg" width="250" height="250">
   <h3 align="center">Koala Airlines</h3>
 
   <p align="center">
