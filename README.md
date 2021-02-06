@@ -4,7 +4,6 @@
  
  <img src="Images/koala_logo.png" width="250" height="250">
   <h3 align="center">Koala Airlines</h3>
-
   <p align="center">
     An awesome little airline ticketing program! 
     <br />
