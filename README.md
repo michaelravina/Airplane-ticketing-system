@@ -33,8 +33,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![](Images/3rd%20SS.png)
-
 There are many great ticketing airline systems around but nothing like Koala Airlines! As my final programming fundamentals project, the code was six months in the making primarily because it is the application of all the things that we were taught in lecture and tutorial sessions. 
 
 Some of the project requirements (specified by the tutor):
@@ -60,16 +58,21 @@ This section should list any major frameworks that you built your project using.
 ## Usage
 
 A step by step guide on how to use the console: 
-
-![](Images/1st%20SS.png)
+<p align="center">
+<img src = "Images/1st%20SS.png" width = "650" height = "800">
+</p>
 
 1. Initial Page where client inputs their names. 
 
-![](Images/2nd%20SS.png)
+<p align="center">
+<img src = "Images/2ndt%20SS.png" width = "650" height = "800">
+</p>
 
 2. A display table with trimmed names is shown as a summary of the input data.
 
-![](Images/3rd%20SS.png)
+<p align="center">
+<img src = "Images/3rd%20SS.png" width = "650" height = "800">
+</p>
 
 3.The final output wherein the names are trimmed together with all the seat & gate numbers, security code, date & time, etc.
 
