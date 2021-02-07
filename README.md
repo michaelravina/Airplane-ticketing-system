@@ -65,13 +65,13 @@ A step by step guide on how to use the console:
 1. Initial Page where client inputs their names. 
 
 <p align="center">
-<img src = "Images/2ndt%20SS.png" width = "650" height = "800">
+<img src = "Images/2nd%20SS.png" width = "650" height = "800">
 </p>
 
 2. A display table with trimmed names is shown as a summary of the input data.
 
 <p align="center">
-<img src = "Images/3rd%20SS.png" width = "650" height = "800">
+<img src = "Images/3rd%20SS.png" width = "850" height = "500">
 </p>
 
 3.The final output wherein the names are trimmed together with all the seat & gate numbers, security code, date & time, etc.
