@@ -59,19 +59,23 @@ This section should list any major frameworks that you built your project using.
 
 A step by step guide on how to use the console: 
 <p align="center">
-<img src = "Images/1st%20SS.png" width = "650" height = "800">
+<img src = "Images/1st%20SS.png" width = "450" height = "650">
 </p>
 
 1. Initial Page where client inputs their names. 
 
+<br />
+<br />
 <p align="center">
-<img src = "Images/2nd%20SS.png" width = "550" height = "850">
+<img src = "Images/2nd%20SS.png" width = "450" height = "650">
 </p>
 
 2. A display table with trimmed names is shown as a summary of the input data.
 
+<br />
+<br />
 <p align="center">
-<img src = "Images/3rd%20SS.png" width = "850" height = "450">
+<img src = "Images/3rd%20SS.png" width = "700" height = "450">
 </p>
 
 3.The final output wherein the names are trimmed together with all the seat & gate numbers, security code, date & time, etc.
